@@ -19,5 +19,6 @@ docker run --gpus all -it \
     -e QT_X11_NO_MITSHM=1 \
     -e TERM=xterm-256color \
     -v $HOME/.Xauthority:/root/.Xauthority \
-    -v $PWD/catkin_ws:~/catkin_ws \
+    -v $PWD/catkin_ws:/home/container/catkin_ws \
+    -v $PWD/scripts-container:/home/container
     horasun/ros-gui:test

@@ -41,5 +41,4 @@ RUN sudo chown -R $user:$group ${HOME}/catkin_ws && \
     sudo rosdep init && \
     rosdep update
 
-COPY scripts-container ${HOME}
 CMD bash
