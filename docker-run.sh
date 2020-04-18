@@ -13,6 +13,8 @@ then
     mkdir -p catkin_ws/src
 fi
 
+tag=${1:-latest}
+
 docker run --gpus all -it \
     --net=host \
     -e DISPLAY=$DISPLAY \
@@ -20,5 +22,5 @@ docker run --gpus all -it \
     -e TERM=xterm-256color \
     -v $HOME/.Xauthority:/root/.Xauthority \
     -v $PWD/catkin_ws:/home/container/catkin_ws \
-    -v $PWD/scripts-container:/home/container
-    horasun/ros-gui:test
+    -v $PWD/scripts-container:/home/container/scripts \
+    horasun/ros-gui:$tag
