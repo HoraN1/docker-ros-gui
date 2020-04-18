@@ -55,8 +55,8 @@ For now, the container is running, and your local working directory `./catkin_ws
 
 ```
 # Run in container
-bash ~/initialize-workspace.sh
-source .bashrc
+bash ~/scripts/initialize-workspace.sh
+source ~/.bashrc
 ```
 
 This script will initialize your workspace and build it. You will find two new directories founded under your local `catkin_ws` called `build` and `devel`. It will also configure you `.bashrc` to source `devel/setup.bash` every time you start a new terminal.
@@ -80,5 +80,5 @@ Or you can clone this repository and modify the Dockerfile to meet your needs.
 ## To test if the X-server is forwarding
 In the docker container, run:
 ```
-bash ~/test-gui.sh
+bash ~/scripts/test-gui.sh
 ```
